@@ -1,6 +1,5 @@
 plugins {
     id 'com.android.application'
-
 }
 
 android {
@@ -15,7 +14,6 @@ android {
         versionCode 1
         versionName '1.0'
     }
-    enableKotlin = false
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
