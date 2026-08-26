@@ -1,9 +1,35 @@
-plugins { id 'com.android.application' }
-android {
- namespace 'gal.rodrigosambade.cameraxlab'
- compileSdk { version = release(37) { minorApiLevel = 1 } }
- defaultConfig { applicationId 'gal.rodrigosambade.cameraxlab'; minSdk 23; targetSdk 37; versionCode 1; versionName '1.0' }
- compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+plugins {
+    id 'com.android.application'
 
 }
-dependencies { implementation 'androidx.appcompat:appcompat:1.7.1'; implementation 'androidx.core:core:1.17.0'; implementation 'com.google.android.material:material:1.12.0'; implementation 'androidx.camera:camera-core:1.4.2'; implementation 'androidx.camera:camera-camera2:1.4.2'; implementation 'androidx.camera:camera-lifecycle:1.4.2'; implementation 'androidx.camera:camera-video:1.4.2'; implementation 'androidx.camera:camera-view:1.4.2' }
+
+android {
+    namespace 'dev.rodrigo.cameraxlab'
+    compileSdk {
+        version = release(37) { minorApiLevel = 1 }
+    }
+    defaultConfig {
+        applicationId 'dev.rodrigo.cameraxlab'
+        minSdk 23
+        targetSdk 37
+        versionCode 1
+        versionName '1.0'
+    }
+    enableKotlin = false
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    testOptions { unitTests.returnDefaultValues = true }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.19.0'
+    implementation 'androidx.activity:activity:1.13.0'
+    implementation 'androidx.camera:camera-core:1.6.1'
+    implementation 'androidx.camera:camera-camera2:1.6.1'
+    implementation 'androidx.camera:camera-lifecycle:1.6.1'
+    implementation 'androidx.camera:camera-view:1.6.1'
+    implementation 'androidx.camera:camera-video:1.6.1'
+    testImplementation 'junit:junit:4.13.2'
+}
